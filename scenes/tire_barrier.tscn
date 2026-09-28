@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://m7htw4mayu57"]
+
+[ext_resource type="Texture2D" uid="uid://0tj076stu5w0" path="res://assets/kenney_racing_pack/PNG/Objects/tires_red_alt.png" id="1_red"]
+[ext_resource type="Texture2D" uid="uid://drhndjdae0nio" path="res://assets/kenney_racing_pack/PNG/Objects/tires_white_alt.png" id="2_white"]
+[ext_resource type="Script" uid="uid://dtelcy2lfhlfv" path="res://scripts/tire_barrier.gd" id="3_tire"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tire"]
+friction = 0.9
+bounce = 0.35
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tire"]
+radius = 24.3
+
+[node name="TireBarrier" type="Node2D" unique_id=1321903599]
+
+[node name="TireBottomLeft" type="RigidBody2D" parent="." unique_id=1685511495]
+position = Vector2(0, 54)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireBottomLeft" unique_id=233831339]
+texture = ExtResource("1_red")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireBottomLeft" unique_id=188168505]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireBottomCenter" type="RigidBody2D" parent="." unique_id=927614386]
+position = Vector2(54, 54)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireBottomCenter" unique_id=809364912]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireBottomCenter" unique_id=779815983]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireBottomRight" type="RigidBody2D" parent="." unique_id=1904773313]
+position = Vector2(108, 54)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireBottomRight" unique_id=1883981863]
+texture = ExtResource("1_red")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireBottomRight" unique_id=909384155]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireBottomFar" type="RigidBody2D" parent="." unique_id=346878191]
+position = Vector2(54, 108)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireBottomFar" unique_id=73900806]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireBottomFar" unique_id=1287177854]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireMiddleLeft" type="RigidBody2D" parent="." unique_id=1561975385]
+position = Vector2(-54, 0)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireMiddleLeft" unique_id=1775935781]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireMiddleLeft" unique_id=142502282]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireMiddleLeftCenter" type="RigidBody2D" parent="." unique_id=1898075387]
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireMiddleLeftCenter" unique_id=1683573668]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireMiddleLeftCenter" unique_id=1000963978]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireMiddleCenter" type="RigidBody2D" parent="." unique_id=886993268]
+position = Vector2(54, 0)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireMiddleCenter" unique_id=599619753]
+texture = ExtResource("1_red")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireMiddleCenter" unique_id=132040562]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireMiddleRight" type="RigidBody2D" parent="." unique_id=749682645]
+position = Vector2(108, 0)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireMiddleRight" unique_id=796332554]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireMiddleRight" unique_id=313635140]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireMiddleFar" type="RigidBody2D" parent="." unique_id=477464800]
+position = Vector2(162, 0)
+mass = 0.45
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireMiddleFar" unique_id=320913377]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireMiddleFar" unique_id=73684934]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireTopLeft" type="RigidBody2D" parent="." unique_id=1566159127]
+position = Vector2(0, -54)
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireTopLeft" unique_id=770472266]
+texture = ExtResource("1_red")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireTopLeft" unique_id=484908060]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireTopCenter" type="RigidBody2D" parent="." unique_id=2022234754]
+position = Vector2(54, -54)
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireTopCenter" unique_id=1751365808]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireTopCenter" unique_id=168538461]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireTopRight" type="RigidBody2D" parent="." unique_id=268128320]
+position = Vector2(108, -54)
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireTopRight" unique_id=1322862164]
+texture = ExtResource("1_red")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireTopRight" unique_id=1028798901]
+shape = SubResource("CircleShape2D_tire")
+
+[node name="TireTopFar" type="RigidBody2D" parent="." unique_id=1778792887]
+position = Vector2(54, -108)
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_tire")
+gravity_scale = 0.0
+linear_damp = 1.6
+angular_damp = 1.8
+script = ExtResource("3_tire")
+
+[node name="Sprite2D" type="Sprite2D" parent="TireTopFar" unique_id=2034207716]
+texture = ExtResource("2_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TireTopFar" unique_id=473773661]
+shape = SubResource("CircleShape2D_tire")

@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://c5jrc740fpurw"]
+
+[ext_resource type="Texture2D" uid="uid://cfchtg7hskp3n" path="res://assets/race_tracks/Generated-Track.png" id="1_track"]
+[ext_resource type="PackedScene" uid="uid://m7htw4mayu57" path="res://scenes/tire_barrier.tscn" id="2_tire"]
+[ext_resource type="PackedScene" uid="uid://ds8vnlbq66x55" path="res://scenes/fence_barrier.tscn" id="3_fence"]
+
+[node name="TrackBase" type="Node2D" unique_id=1021190635]
+
+[node name="Track" type="Sprite2D" parent="." unique_id=1764808265]
+position = Vector2(-10, 1070)
+scale = Vector2(8, 8.385)
+texture = ExtResource("1_track")
+
+[node name="Walls" type="Node2D" parent="." unique_id=645013484]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=318588396]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D" unique_id=1986613917]
+position = Vector2(-5406, 1216)
+polygon = PackedVector2Array(-78.19385, -3148.665, -113.19385, 3028.335, 95.80615, 2993.335, 95.80615, -3253.665)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls/StaticBody2D" unique_id=1785775391]
+position = Vector2(-130, -98)
+polygon = PackedVector2Array(-5278, -2079, 5261, -2062, 5244, -1835, -5313, -1905)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls/StaticBody2D" unique_id=2147292041]
+position = Vector2(72, -12)
+polygon = PackedVector2Array(5314, -2062, 5331, 4203, 5052, 4168, 5052, -2131)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls/StaticBody2D" unique_id=334222289]
+position = Vector2(-36, 143)
+polygon = PackedVector2Array(5314, 4238, -5243, 4255, -5278, 3993, 5279, 4028)
+
+[node name="TireBarriers" type="Node2D" parent="." unique_id=1965094046]
+
+[node name="TireBarrier1" parent="TireBarriers" unique_id=1950712648 instance=ExtResource("2_tire")]
+position = Vector2(-4331, -838)
+rotation = 2.361254
+
+[node name="TireBarrier2" parent="TireBarriers" unique_id=519804955 instance=ExtResource("2_tire")]
+position = Vector2(-4453, -633.0001)
+rotation = 2.361254
+
+[node name="TireBarrier3" parent="TireBarriers" unique_id=1865832723 instance=ExtResource("2_tire")]
+position = Vector2(-4502, -420)
+rotation = 2.361254
+
+[node name="TireBarrier11" parent="TireBarriers" unique_id=1572257856 instance=ExtResource("2_tire")]
+position = Vector2(-1375.9999, 777)
+rotation = 2.9263148
+
+[node name="TireBarrier12" parent="TireBarriers" unique_id=1924559066 instance=ExtResource("2_tire")]
+position = Vector2(-1188, 903.99994)
+rotation = 2.8863819
+
+[node name="TireBarrier13" parent="TireBarriers" unique_id=109836493 instance=ExtResource("2_tire")]
+position = Vector2(-987, 1022.99994)
+rotation = 2.9067545
+
+[node name="TireBarrier14" parent="TireBarriers" unique_id=733124253 instance=ExtResource("2_tire")]
+position = Vector2(636, -133.99997)
+rotation = 3.9212902
+
+[node name="TireBarrier15" parent="TireBarriers" unique_id=1293023160 instance=ExtResource("2_tire")]
+position = Vector2(696, 73.00003)
+rotation = 3.9212902
+
+[node name="TireBarrier16" parent="TireBarriers" unique_id=1100302968 instance=ExtResource("2_tire")]
+position = Vector2(696.00006, 306.99994)
+rotation = 3.9212902
+
+[node name="TireBarrier17" parent="TireBarriers" unique_id=1438019206 instance=ExtResource("2_tire")]
+position = Vector2(688.00006, 531)
+rotation = 3.9212902
+
+[node name="TireBarrier18" parent="TireBarriers" unique_id=1212831553 instance=ExtResource("2_tire")]
+position = Vector2(2641, 1905.9999)
+rotation = 3.7303088
+
+[node name="TireBarrier21" parent="TireBarriers" unique_id=1989468 instance=ExtResource("2_tire")]
+position = Vector2(4027.0002, 3775.9998)
+rotation = 3.9077394
+
+[node name="TireBarrier22" parent="TireBarriers" unique_id=1546126818 instance=ExtResource("2_tire")]
+position = Vector2(4260.0005, 3737)
+rotation = 3.71057
+
+[node name="TireBarrier23" parent="TireBarriers" unique_id=2051595842 instance=ExtResource("2_tire")]
+position = Vector2(4474, 3695.0002)
+rotation = 3.71057
+
+[node name="TireBarrier24" parent="TireBarriers" unique_id=1052054536 instance=ExtResource("2_tire")]
+position = Vector2(4459, -830.0001)
+rotation = 3.9077394
+
+[node name="TireBarrier25" parent="TireBarriers" unique_id=91033002 instance=ExtResource("2_tire")]
+position = Vector2(4245, -952.0001)
+rotation = 3.9077394
+
+[node name="TireBarrier26" parent="TireBarriers" unique_id=114444883 instance=ExtResource("2_tire")]
+position = Vector2(4014.0002, -1015.00024)
+rotation = 3.9077394
+
+[node name="TireBarrier27" parent="TireBarriers" unique_id=1321903599 instance=ExtResource("2_tire")]
+position = Vector2(-2492.9998, -226.00006)
+rotation = 4.7507863
+
+[node name="TireBarrier28" parent="TireBarriers" unique_id=1774964395 instance=ExtResource("2_tire")]
+position = Vector2(-2664.0002, -79.000015)
+rotation = 4.691445
+
+[node name="TireBarrier29" parent="TireBarriers" unique_id=587763146 instance=ExtResource("2_tire")]
+position = Vector2(2119.0002, -207.00002)
+rotation = 4.691445
+
+[node name="TireBarrier30" parent="TireBarriers" unique_id=269465555 instance=ExtResource("2_tire")]
+position = Vector2(2284, -60)
+rotation = 4.871214
+
+[node name="BarrierFence" type="Node2D" parent="." unique_id=714913720]
+position = Vector2(-557, -917)
+
+[node name="FenceBarrier1" parent="BarrierFence" unique_id=11843046 instance=ExtResource("3_fence")]
+position = Vector2(-2800, 450)
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier2" parent="BarrierFence" unique_id=1909888162 instance=ExtResource("3_fence")]
+position = Vector2(-1146, 450)
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier3" parent="BarrierFence" unique_id=132266705 instance=ExtResource("3_fence")]
+position = Vector2(512, 445)
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier4" parent="BarrierFence" unique_id=11224448 instance=ExtResource("3_fence")]
+position = Vector2(2155, 445)
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier5" parent="BarrierFence" unique_id=1939281887 instance=ExtResource("3_fence")]
+position = Vector2(2984, 445)
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier6" parent="BarrierFence" unique_id=1189627232 instance=ExtResource("3_fence")]
+position = Vector2(3620.0002, 2340)
+rotation = 1.1084791
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier7" parent="BarrierFence" unique_id=1411975603 instance=ExtResource("3_fence")]
+position = Vector2(1186, 2392)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier8" parent="BarrierFence" unique_id=590024909 instance=ExtResource("3_fence")]
+position = Vector2(3024.0002, 3272)
+rotation = 2.1621938
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier9" parent="BarrierFence" unique_id=1647250006 instance=ExtResource("3_fence")]
+position = Vector2(2577, 1374.9998)
+rotation = 7.3356304
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier10" parent="BarrierFence" unique_id=1594824231 instance=ExtResource("3_fence")]
+position = Vector2(-222, 3717)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier11" parent="BarrierFence" unique_id=1753319458 instance=ExtResource("3_fence")]
+position = Vector2(-229, 2075)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier12" parent="BarrierFence" unique_id=1683592500 instance=ExtResource("3_fence")]
+position = Vector2(-3202, 714)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier13" parent="BarrierFence" unique_id=1371685004 instance=ExtResource("3_fence")]
+position = Vector2(-3067, 2352)
+rotation = 1.1160692
+scale = Vector2(2, 2)
+
+[node name="FenceBarrier14" parent="BarrierFence" unique_id=1705576112 instance=ExtResource("3_fence")]
+position = Vector2(-2234, 3507.0002)
+rotation = 0.021482348
+scale = Vector2(2, 2)

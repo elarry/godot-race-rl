@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+.DS_Store
+
+.continue/
+.vscode/
+.claude/
+
+# Python (rl/)
+.venv/
+__pycache__/
+*.pyc
+checkpoints/
+runs/
+tensorboard_logs/
+events.out.tfevents*
+
+_dev/
+specs/

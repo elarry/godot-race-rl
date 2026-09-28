@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cmnswgbu5jlap"]
+
+[ext_resource type="PackedScene" uid="uid://c5jrc740fpurw" path="res://scenes/track_base.tscn" id="0_base"]
+[ext_resource type="PackedScene" uid="uid://dc3nyevdf4w6h" path="res://scenes/car.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cy7pusn6mlaeb" path="res://scripts/camera_follow.gd" id="3_camera"]
+[ext_resource type="Texture2D" path="res://assets/kenney_racing_pack/PNG/Cars/car_red_1.png" id="4_car02_texture"]
+
+[node name="TrackBase" unique_id=1037790408 instance=ExtResource("0_base")]
+
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=1141850302]
+position = Vector2(-43.000004, 1122)
+scale = Vector2(8.819, 3.858)
+zoom = Vector2(0.11, 0.11)
+script = ExtResource("3_camera")
+target_paths = Array[NodePath]([NodePath("../Car01"), NodePath("../Car02")])
+
+[node name="Car01" parent="." index="5" unique_id=2028538077 instance=ExtResource("1")]
+top_level = true
+position = Vector2(-1313, -792)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+action_accelerate = "p1_up"
+action_brake = "p1_down"
+action_turn_left = "p1_left"
+action_turn_right = "p1_right"
+
+[node name="Car02" parent="." index="6" unique_id=455834157 instance=ExtResource("1")]
+top_level = true
+position = Vector2(-1118, -646)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+action_accelerate = "p2_up"
+action_brake = "p2_down"
+action_turn_left = "p2_left"
+action_turn_right = "p2_right"
+
+[node name="Sprite2D" parent="Car02" index="0"]
+texture = ExtResource("4_car02_texture")

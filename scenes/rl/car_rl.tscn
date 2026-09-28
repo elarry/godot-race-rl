@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dyh05lvd7n0fq"]
+
+[ext_resource type="PackedScene" uid="uid://dc3nyevdf4w6h" path="res://scenes/car.tscn" id="1"]
+[ext_resource type="Script" uid="uid://biqigljlnh2n8" path="res://scripts/rl/car_sensors.gd" id="2"]
+[ext_resource type="Script" uid="uid://btdwevv5lmc6" path="res://scripts/rl/ray_debug_label.gd" id="3"]
+
+[node name="CarRL" unique_id=320385056 instance=ExtResource("1")]
+
+[node name="Ray-180" type="RayCast2D" parent="." index="2" unique_id=2000000001]
+rotation = -3.141593
+target_position = Vector2(0, -600)
+
+[node name="Ray-135" type="RayCast2D" parent="." index="3" unique_id=2000000002]
+rotation = -2.356194
+target_position = Vector2(0, -600)
+
+[node name="Ray-100" type="RayCast2D" parent="." index="4" unique_id=2000000003]
+rotation = -1.745329
+target_position = Vector2(0, -600)
+
+[node name="Ray-75" type="RayCast2D" parent="." index="5" unique_id=2000000004]
+rotation = -1.308997
+target_position = Vector2(0, -600)
+
+[node name="Ray-55" type="RayCast2D" parent="." index="6" unique_id=2000000005]
+rotation = -0.9599311
+target_position = Vector2(0, -600)
+
+[node name="Ray-40" type="RayCast2D" parent="." index="7" unique_id=2000000006]
+rotation = -0.6981317
+target_position = Vector2(0, -600)
+
+[node name="Ray-28" type="RayCast2D" parent="." index="8" unique_id=2000000007]
+rotation = -0.4886922
+target_position = Vector2(0, -600)
+
+[node name="Ray-18" type="RayCast2D" parent="." index="9" unique_id=2000000008]
+rotation = -0.3141593
+target_position = Vector2(0, -600)
+
+[node name="Ray-10" type="RayCast2D" parent="." index="10" unique_id=2000000009]
+rotation = -0.1745329
+target_position = Vector2(0, -600)
+
+[node name="Ray-5" type="RayCast2D" parent="." index="11" unique_id=2000000010]
+rotation = -0.08726646
+target_position = Vector2(0, -600)
+
+[node name="Ray0" type="RayCast2D" parent="." index="12" unique_id=2000000011]
+target_position = Vector2(0, -600)
+
+[node name="Ray5" type="RayCast2D" parent="." index="13" unique_id=2000000012]
+rotation = 0.08726646
+target_position = Vector2(0, -600)
+
+[node name="Ray10" type="RayCast2D" parent="." index="14" unique_id=2000000013]
+rotation = 0.1745329
+target_position = Vector2(0, -600)
+
+[node name="Ray18" type="RayCast2D" parent="." index="15" unique_id=2000000014]
+rotation = 0.3141593
+target_position = Vector2(0, -600)
+
+[node name="Ray28" type="RayCast2D" parent="." index="16" unique_id=2000000015]
+rotation = 0.4886922
+target_position = Vector2(0, -600)
+
+[node name="Ray40" type="RayCast2D" parent="." index="17" unique_id=2000000016]
+rotation = 0.6981317
+target_position = Vector2(0, -600)
+
+[node name="Ray55" type="RayCast2D" parent="." index="18" unique_id=2000000017]
+rotation = 0.9599311
+target_position = Vector2(0, -600)
+
+[node name="Ray75" type="RayCast2D" parent="." index="19" unique_id=2000000018]
+rotation = 1.308997
+target_position = Vector2(0, -600)
+
+[node name="Ray100" type="RayCast2D" parent="." index="20" unique_id=2000000019]
+rotation = 1.745329
+target_position = Vector2(0, -600)
+
+[node name="Ray135" type="RayCast2D" parent="." index="21" unique_id=2000000020]
+rotation = 2.356194
+target_position = Vector2(0, -600)
+
+[node name="CarSensors" type="Node" parent="." index="22" unique_id=1052917980]
+script = ExtResource("2")
+
+[node name="RayDebugPrinter" type="Node" parent="." index="23" unique_id=981037481]
+script = ExtResource("3")

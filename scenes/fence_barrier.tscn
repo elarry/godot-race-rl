@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds8vnlbq66x55"]
+
+[ext_resource type="Texture2D" uid="uid://clgumd88kkadv" path="res://assets/kenney_racing_pack/PNG/Objects/barrier_red_race.png" id="1_fence"]
+[ext_resource type="Texture2D" uid="uid://dcrt1w17lp873" path="res://assets/kenney_racing_pack/PNG/Objects/barrier_white_race.png" id="2_fence_white"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(816, 57)
+
+[node name="FenceBarrier" type="StaticBody2D"]
+
+[node name="Barrier1" type="Sprite2D" parent="."]
+position = Vector2(-57, 0)
+texture = ExtResource("1_fence")
+
+[node name="Barrier2" type="Sprite2D" parent="."]
+position = Vector2(559, -1)
+texture = ExtResource("2_fence_white")
+
+[node name="Barrier3" type="Sprite2D" parent="."]
+position = Vector2(353, -1)
+texture = ExtResource("1_fence")
+
+[node name="Barrier4" type="Sprite2D" parent="."]
+position = Vector2(150, 0)
+texture = ExtResource("2_fence_white")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(254, 0.5)
+shape = SubResource("RectangleShape2D_1")

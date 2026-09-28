@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://pced5rqwdqe5"]
+
+[ext_resource type="PackedScene" uid="uid://c5jrc740fpurw" path="res://scenes/track_base.tscn" id="0_base"]
+[ext_resource type="PackedScene" uid="uid://dyh05lvd7n0fq" path="res://scenes/rl/car_rl.tscn" id="1_car_rl"]
+[ext_resource type="Script" uid="uid://b5qtslkmoopoo" path="res://scripts/rl/checkpoint_manager.gd" id="2_cp_mgr"]
+[ext_resource type="Texture2D" uid="uid://crb5bwolqug35" path="res://assets/kenney_racing_pack/PNG/Cars/car_magenta_5.png" id="3_2wub7"]
+[ext_resource type="Script" uid="uid://pha6a0pmpei7" path="res://scripts/rl/rl_bridge.gd" id="3_rl_bridge"]
+[ext_resource type="Texture2D" uid="uid://b22n1vd74w5eg" path="res://assets/kenney_racing_pack/PNG/Cars/car_green_3.png" id="4_rlk24"]
+[ext_resource type="Texture2D" uid="uid://c2nb3s4f7y10a" path="res://assets/kenney_racing_pack/PNG/Cars/car_red_1.png" id="5_dft6m"]
+[ext_resource type="Texture2D" uid="uid://wc14384lfcqy" path="res://assets/kenney_racing_pack/PNG/Cars/car_yellow_5.png" id="6_2wub7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp1"]
+size = Vector2(490.5, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp2"]
+size = Vector2(675.3491, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp3"]
+size = Vector2(756.1012, 126.5448)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp4"]
+size = Vector2(591.7186, 104.8241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp5"]
+size = Vector2(656.40436, 104.24304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp6"]
+size = Vector2(651.95447, 102.25342)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp7"]
+size = Vector2(610.57996, 142.76398)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp8"]
+size = Vector2(459.9466, 88.11795)
+
+[node name="TrackBase2" unique_id=595887440 instance=ExtResource("0_base")]
+
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=1251692757]
+position = Vector2(-60, 1110)
+zoom = Vector2(0.09, 0.09)
+
+[node name="Cars" type="Node2D" parent="." index="5" unique_id=2091847361]
+
+[node name="Car01" parent="Cars" index="0" unique_id=1291669281 instance=ExtResource("1_car_rl")]
+top_level = true
+position = Vector2(-1313, -785)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+rl_mode = true
+
+[node name="Car02" parent="Cars" index="1" unique_id=2091847362 instance=ExtResource("1_car_rl")]
+top_level = true
+position = Vector2(-1170, -640)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+rl_mode = true
+
+[node name="Sprite2D" parent="Cars/Car02" index="0"]
+texture = ExtResource("3_2wub7")
+
+[node name="Car03" parent="Cars" index="2" unique_id=614772896 instance=ExtResource("1_car_rl")]
+top_level = true
+position = Vector2(-1070, -785)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+rl_mode = true
+
+[node name="Sprite2D" parent="Cars/Car03" index="0"]
+texture = ExtResource("4_rlk24")
+
+[node name="Car04" parent="Cars" index="3" unique_id=1306980567 instance=ExtResource("1_car_rl")]
+top_level = true
+position = Vector2(-936, -646)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+rl_mode = true
+
+[node name="Sprite2D" parent="Cars/Car04" index="0"]
+texture = ExtResource("5_dft6m")
+
+[node name="Car05" parent="Cars" index="4" unique_id=1700478415 instance=ExtResource("1_car_rl")]
+top_level = true
+position = Vector2(-831, -786)
+rotation = -1.5707964
+scale = Vector2(1.2, 1.194)
+max_speed = 1000.0
+acceleration = 400.0
+drift_factor = 1.5
+rl_mode = true
+
+[node name="Sprite2D" parent="Cars/Car05" index="0"]
+texture = ExtResource("6_2wub7")
+
+[node name="CheckpointManager" type="Node" parent="." index="6" unique_id=1840652985]
+script = ExtResource("2_cp_mgr")
+
+[node name="Checkpoint01" type="Area2D" parent="CheckpointManager" index="0" unique_id=1852025960]
+position = Vector2(-1313, -1200)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint01" index="0" unique_id=2077833066]
+position = Vector2(-135, 473)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_cp1")
+
+[node name="Checkpoint02" type="Area2D" parent="CheckpointManager" index="1" unique_id=1462565028]
+position = Vector2(-3500, -600)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint02" index="0" unique_id=1714690125]
+position = Vector2(-848, 1651.9999)
+rotation = -3.1258848
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_cp2")
+
+[node name="Checkpoint03" type="Area2D" parent="CheckpointManager" index="2" unique_id=1960555379]
+position = Vector2(-4200, 600)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint03" index="0" unique_id=662493318]
+position = Vector2(2721.9998, 2399)
+rotation = 1.0646508
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_cp3")
+
+[node name="Checkpoint04" type="Area2D" parent="CheckpointManager" index="3" unique_id=1215678880]
+position = Vector2(-2200, 2200)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint04" index="0" unique_id=509137499]
+position = Vector2(893, -803)
+rotation = -0.45553094
+shape = SubResource("RectangleShape2D_cp4")
+
+[node name="Checkpoint05" type="Area2D" parent="CheckpointManager" index="4" unique_id=131447913]
+position = Vector2(200, 3200)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint05" index="0" unique_id=1506783570]
+position = Vector2(-682, -3379)
+rotation = -4.707153
+shape = SubResource("RectangleShape2D_cp5")
+
+[node name="Checkpoint06" type="Area2D" parent="CheckpointManager" index="5" unique_id=1451040542]
+position = Vector2(2800, 2000)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint06" index="0" unique_id=1384053737]
+position = Vector2(-1333, -944)
+rotation = -0.7557276
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cp6")
+
+[node name="Checkpoint07" type="Area2D" parent="CheckpointManager" index="6" unique_id=759645545]
+position = Vector2(3800, 0)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint07" index="0" unique_id=966034745]
+position = Vector2(-299, 2778)
+rotation = 2.677335
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_cp7")
+
+[node name="Checkpoint08" type="Area2D" parent="CheckpointManager" index="7" unique_id=1649834046]
+position = Vector2(500, -900)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointManager/Checkpoint08" index="0" unique_id=254593606]
+position = Vector2(3791, 839)
+rotation = -0.052359883
+shape = SubResource("RectangleShape2D_cp8")
+
+[node name="RLBridge" type="Node" parent="." index="7" unique_id=550307938]
+script = ExtResource("3_rl_bridge")
+
+[editable path="Cars/Car01"]
+[editable path="Cars/Car02"]
+[editable path="Cars/Car03"]
+[editable path="Cars/Car04"]
+[editable path="Cars/Car05"]
